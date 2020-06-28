@@ -33,9 +33,11 @@ function All() {
       {isLoading ? (
         <div>Loading ...</div>
       ) : (
-      <ul>
-        {data.count}
-      </ul>
+      <p>
+        {data.results.map(item => (
+          <p>{item.name}</p>
+        ))}
+      </p>
       )}
     </>
   );
