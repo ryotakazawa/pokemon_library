@@ -33,11 +33,11 @@ function All() {
       {isLoading ? (
         <div>Loading ...</div>
       ) : (
-      <p>
-        {data.results.map(item => (
-          <p>{item.name}</p>
-        ))}
-      </p>
+        <ul>
+          {data.results.map((item, index) => (
+            <li key={index}>{item.name}</li>
+          ))}
+        </ul>
       )}
     </>
   );
